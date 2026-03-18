@@ -29,12 +29,14 @@ def Save_PDFs(uploaded_files):
             f.write(file.getbuffer())
 
         saved_files.append(file.name)
+    pass
 
 
 def DeletePDFS(Dir):
     for file in os.listdir(Dir):
         file_path = os.path.join(Dir, file)
         os.remove(file_path)
+    pass
 
 
 if st.button("Create Vectors"):
